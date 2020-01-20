@@ -1,5 +1,5 @@
 yarn-error.log
-dist/
+dist
 .cache/
 node_modules
 **/*.iml
