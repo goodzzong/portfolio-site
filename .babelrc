@@ -4,7 +4,13 @@
     ["@babel/plugin-proposal-class-properties", {}, "@babel/plugin-proposal-class-properties"],
     ["@babel/plugin-proposal-optional-chaining", {}, "@babel/plugin-proposal-optional-chaining"],
     ["@babel/plugin-transform-runtime", {}, "@babel/plugin-transform-runtime"],
-    ["styled-jsx/babel", { "optimizeForSpeed": true, "vendorPrefixes": true, "sourceMaps": false }],
+    ["styled-jsx/babel", { 
+      "optimizeForSpeed": true, 
+      "vendorPrefixes": true, 
+      "sourceMaps": false,
+      "plugins": ["styled-jsx-plugin-sass"]
+      }
+    ],
     [
       "module-resolver",
       {
