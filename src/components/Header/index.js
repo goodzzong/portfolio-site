@@ -1,13 +1,13 @@
 import React from 'react';
+import Logo from '@/components/Logo';
+import NaviItem from '@/components/Header/NaviItem'
 
-const Header = () => {
+const Header = ({ user, onLogout }) => {
 	return (
 		<>
 			<header className="header">
 				<div className="header__wrapper">
-					<div className="header__column">
-						<a href="/"><i className="fas fa-address-card"></i></a>
-					</div>
+					<Logo />
 					<div className="header__column">
 						<form>
 							<input type="text" placeholder="Search by ..." name="search" />
@@ -15,15 +15,18 @@ const Header = () => {
 					</div>
 					<div className="header__column">
 						<ul>
-							<li><a href="/portfolios/create">Create</a></li>
-							<li><a href="">Profile</a></li>
-							<li><a href="">Logout</a></li>
+							<NaviItem to="/" text="Create" show={user} />
+							<NaviItem to="/" text="Profile" show={user} />
+							<NaviItem to="/" text="Logout" show={user} />
+
+							<NaviItem to="/signup" text="SIGNUP" show={!user} />
+							<NaviItem to="/login" text="LOGIN" show={!user} />
 						</ul>
 					</div>
 				</div>
 			</header>
 
-			<style jsx>{`
+			<style jsx global>{`
 			.header {
 				background: linear-gradient( to left, #c5f6fa, #15aabf );
 				margin-bottom: 50px;

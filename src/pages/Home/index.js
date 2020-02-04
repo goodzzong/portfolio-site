@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = () => {
 	return (
-		<div>
+		<>
 			<main>
 				<div className="main-title">
 					우리들의 작품
@@ -39,12 +39,7 @@ const Home = () => {
 			</main>
 
 			<style jsx>{`
-			main {
-				width: 100%;
-				max-width: 1200px;
-				margin: 0 auto;
-				min-height: 70vh;
-			}
+
 			.main-title {
 				display: block;
 				font-size: 1.5em;
@@ -117,7 +112,7 @@ const Home = () => {
 				}
 			}		
 			`}</style>
-		</div>
+		</>
 	);
 };
 
